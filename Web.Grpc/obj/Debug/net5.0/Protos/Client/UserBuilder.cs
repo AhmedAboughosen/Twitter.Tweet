@@ -26,20 +26,21 @@ namespace Twitter.Tweet.Grpc.Protos.UserBuilder {
           string.Concat(
             "CiBQcm90b3MvQ2xpZW50L3VzZXJfYnVpbGRlci5wcm90bxINdHdpdHRlci50",
             "d2VldBoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvIiUKB1JlcXVl",
-            "c3QSDAoEcGFnZRgBIAEoBRIMCgRzaXplGAIgASgFIkcKCFJlc3BvbnNlEjsK",
+            "c3QSDAoEcGFnZRgBIAEoBRIMCgRzaXplGAIgASgFInIKCFJlc3BvbnNlEjsK",
             "EWV2ZW50Tm90aWZpY2F0aW9uGAEgAygLMiAudHdpdHRlci50d2VldC5FdmVu",
-            "dE5vdGlmaWNhdGlvbiKmAQoRRXZlbnROb3RpZmljYXRpb24SKAoCaWQYASAB",
-            "KAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSLwoJZnVsbF9uYW1l",
-            "GAIgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEhQKDGNyZWF0",
-            "ZWRfZGF0ZRgDIAEoCRISCgpsYXN0X2xvZ2luGAQgASgJEgwKBHR5cGUYBSAB",
-            "KAkyRgoLVXNlckhpc3RvcnkSNwoEUmVhZBIWLnR3aXR0ZXIudHdlZXQuUmVx",
-            "dWVzdBoXLnR3aXR0ZXIudHdlZXQuUmVzcG9uc2VCKKoCJVR3aXR0ZXIuVHdl",
-            "ZXQuR3JwYy5Qcm90b3MuVXNlckJ1aWxkZXJiBnByb3RvMw=="));
+            "dE5vdGlmaWNhdGlvbhIMCgRwYWdlGAIgASgFEgwKBHNpemUYAyABKAUSDQoF",
+            "Y291bnQYBCABKAUipgEKEUV2ZW50Tm90aWZpY2F0aW9uEigKAmlkGAEgASgL",
+            "MhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEi8KCWZ1bGxfbmFtZRgC",
+            "IAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRIUCgxjcmVhdGVk",
+            "X2RhdGUYAyABKAkSEgoKbGFzdF9sb2dpbhgEIAEoCRIMCgR0eXBlGAUgASgJ",
+            "MkYKC1VzZXJIaXN0b3J5EjcKBFJlYWQSFi50d2l0dGVyLnR3ZWV0LlJlcXVl",
+            "c3QaFy50d2l0dGVyLnR3ZWV0LlJlc3BvbnNlQiiqAiVUd2l0dGVyLlR3ZWV0",
+            "LkdycGMuUHJvdG9zLlVzZXJCdWlsZGVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Twitter.Tweet.Grpc.Protos.UserBuilder.Request), global::Twitter.Tweet.Grpc.Protos.UserBuilder.Request.Parser, new[]{ "Page", "Size" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Twitter.Tweet.Grpc.Protos.UserBuilder.Response), global::Twitter.Tweet.Grpc.Protos.UserBuilder.Response.Parser, new[]{ "EventNotification" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Twitter.Tweet.Grpc.Protos.UserBuilder.Response), global::Twitter.Tweet.Grpc.Protos.UserBuilder.Response.Parser, new[]{ "EventNotification", "Page", "Size", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Twitter.Tweet.Grpc.Protos.UserBuilder.EventNotification), global::Twitter.Tweet.Grpc.Protos.UserBuilder.EventNotification.Parser, new[]{ "Id", "FullName", "CreatedDate", "LastLogin", "Type" }, null, null, null, null)
           }));
     }
@@ -285,6 +286,9 @@ namespace Twitter.Tweet.Grpc.Protos.UserBuilder {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Response(Response other) : this() {
       eventNotification_ = other.eventNotification_.Clone();
+      page_ = other.page_;
+      size_ = other.size_;
+      count_ = other.count_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -303,6 +307,39 @@ namespace Twitter.Tweet.Grpc.Protos.UserBuilder {
       get { return eventNotification_; }
     }
 
+    /// <summary>Field number for the "page" field.</summary>
+    public const int PageFieldNumber = 2;
+    private int page_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Page {
+      get { return page_; }
+      set {
+        page_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "size" field.</summary>
+    public const int SizeFieldNumber = 3;
+    private int size_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Size {
+      get { return size_; }
+      set {
+        size_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "count" field.</summary>
+    public const int CountFieldNumber = 4;
+    private int count_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Count {
+      get { return count_; }
+      set {
+        count_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Response);
@@ -317,6 +354,9 @@ namespace Twitter.Tweet.Grpc.Protos.UserBuilder {
         return true;
       }
       if(!eventNotification_.Equals(other.eventNotification_)) return false;
+      if (Page != other.Page) return false;
+      if (Size != other.Size) return false;
+      if (Count != other.Count) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -324,6 +364,9 @@ namespace Twitter.Tweet.Grpc.Protos.UserBuilder {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= eventNotification_.GetHashCode();
+      if (Page != 0) hash ^= Page.GetHashCode();
+      if (Size != 0) hash ^= Size.GetHashCode();
+      if (Count != 0) hash ^= Count.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -341,6 +384,18 @@ namespace Twitter.Tweet.Grpc.Protos.UserBuilder {
       output.WriteRawMessage(this);
     #else
       eventNotification_.WriteTo(output, _repeated_eventNotification_codec);
+      if (Page != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Page);
+      }
+      if (Size != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Size);
+      }
+      if (Count != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Count);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -351,6 +406,18 @@ namespace Twitter.Tweet.Grpc.Protos.UserBuilder {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       eventNotification_.WriteTo(ref output, _repeated_eventNotification_codec);
+      if (Page != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Page);
+      }
+      if (Size != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Size);
+      }
+      if (Count != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Count);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -361,6 +428,15 @@ namespace Twitter.Tweet.Grpc.Protos.UserBuilder {
     public int CalculateSize() {
       int size = 0;
       size += eventNotification_.CalculateSize(_repeated_eventNotification_codec);
+      if (Page != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Page);
+      }
+      if (Size != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Size);
+      }
+      if (Count != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Count);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -373,6 +449,15 @@ namespace Twitter.Tweet.Grpc.Protos.UserBuilder {
         return;
       }
       eventNotification_.Add(other.eventNotification_);
+      if (other.Page != 0) {
+        Page = other.Page;
+      }
+      if (other.Size != 0) {
+        Size = other.Size;
+      }
+      if (other.Count != 0) {
+        Count = other.Count;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -391,6 +476,18 @@ namespace Twitter.Tweet.Grpc.Protos.UserBuilder {
             eventNotification_.AddEntriesFrom(input, _repeated_eventNotification_codec);
             break;
           }
+          case 16: {
+            Page = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            Size = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            Count = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -407,6 +504,18 @@ namespace Twitter.Tweet.Grpc.Protos.UserBuilder {
             break;
           case 10: {
             eventNotification_.AddEntriesFrom(ref input, _repeated_eventNotification_codec);
+            break;
+          }
+          case 16: {
+            Page = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            Size = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            Count = input.ReadInt32();
             break;
           }
         }

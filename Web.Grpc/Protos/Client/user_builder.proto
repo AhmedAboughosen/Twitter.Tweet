@@ -18,6 +18,9 @@ message Request{
 
 message Response {
   repeated EventNotification eventNotification = 1;
+  int32 page = 2;
+  int32 size = 3;
+  int32 count = 4;
 }
 
 message EventNotification {

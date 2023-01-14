@@ -67,6 +67,10 @@ namespace Infrastructure.MessageBus.Listener
             {
                 _channel.BasicAck(deliveryTag: arg.DeliveryTag, multiple: false);
             }
+            // else
+            // {
+            //     _channel.BasicReject(deliveryTag: arg.DeliveryTag,false);   
+            // }
         }
 
 
